@@ -1,0 +1,15 @@
+{
+  "elo": {
+    "k": 10.0,
+    "hfa": 75.0,
+    "season_regress": 0.1
+  },
+  "logreg": {
+    "C": 0.01
+  },
+  "lgbm": {
+    "n_estimators": 150,
+    "num_leaves": 7,
+    "min_child_samples": 100
+  }
+}

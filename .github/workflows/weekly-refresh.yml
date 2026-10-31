@@ -1,0 +1,54 @@
+name: Weekly data refresh
+
+# Tuesday 06:17 UTC: after the Monday-night game; the odd minute avoids the busy top of the hour.
+on:
+  schedule:
+    - cron: "17 6 * * 2"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install
+        run: |
+          pip install -r requirements.txt
+          pip install -e . --no-deps
+
+      # Completed seasons are cached between runs so we never re-download them.
+      - name: Restore raw-data cache
+        uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+
+      - name: Refresh (fetch current season, rebuild features, predict, simulate)
+        run: python -m pitchiq.pipeline refresh
+
+      - name: Commit updated artifacts
+        run: |
+          git config user.name "pitchiq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add artifacts reports
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Weekly refresh: $(date -u +%Y-%m-%d)"
+            git push
+          fi

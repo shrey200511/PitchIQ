@@ -1,0 +1,207 @@
+[
+  {
+    "match_id": "2026_Aston Villa_Fulham",
+    "base_home_logit": -0.8580336717231231,
+    "drivers": [
+      {
+        "feature": "xg_balance_diff",
+        "label": "xG balance gap (home - away)",
+        "value": -0.26521451491561643,
+        "shap_home": -0.1475290409402509,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "a_xgf_ewm",
+        "label": "Away xG created (recent avg)",
+        "value": 1.4913656408659757,
+        "shap_home": -0.08133842049130516,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "a_sota_ewm",
+        "label": "Away shots on target allowed",
+        "value": 3.655288288222833,
+        "shap_home": -0.055076297381512346,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "elo_home",
+        "label": "Home Elo rating",
+        "value": 1510.574121863634,
+        "shap_home": 0.0541909636476782,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "elo_exp_home",
+        "label": "Elo expected score (home)",
+        "value": 0.7042634174726474,
+        "shap_home": 0.04253074821108664,
+        "direction": "towards home win"
+      }
+    ]
+  },
+  {
+    "match_id": "2026_Tottenham_Crystal Palace",
+    "base_home_logit": -0.8580336717231231,
+    "drivers": [
+      {
+        "feature": "xg_balance_diff",
+        "label": "xG balance gap (home - away)",
+        "value": 0.4619604339023409,
+        "shap_home": 0.11736798006065575,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "elo_home",
+        "label": "Home Elo rating",
+        "value": 1427.1909163479354,
+        "shap_home": -0.0780304121841843,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "a_xgf_ewm",
+        "label": "Away xG created (recent avg)",
+        "value": 1.539940388559901,
+        "shap_home": -0.0776235151436755,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "a_ga_ewm",
+        "label": "Away goals conceded (recent avg)",
+        "value": 2.1281109487524503,
+        "shap_home": 0.06775878908007314,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "elo_exp_home",
+        "label": "Elo expected score (home)",
+        "value": 0.6044497394520509,
+        "shap_home": -0.04692878764511892,
+        "direction": "away from home win"
+      }
+    ]
+  },
+  {
+    "match_id": "2026_Liverpool_Arsenal",
+    "base_home_logit": -0.8580336717231231,
+    "drivers": [
+      {
+        "feature": "xg_balance_diff",
+        "label": "xG balance gap (home - away)",
+        "value": -0.8393578367566781,
+        "shap_home": -0.1625332079559846,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "elo_home",
+        "label": "Home Elo rating",
+        "value": 1582.4188336127502,
+        "shap_home": 0.13908519901594613,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "h_sota_ewm",
+        "label": "Home shots on target allowed",
+        "value": 3.5760000582379954,
+        "shap_home": 0.07845252977441122,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "a_ga_ewm",
+        "label": "Away goals conceded (recent avg)",
+        "value": 0.6467892579899931,
+        "shap_home": -0.07055963417449866,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "elo_exp_home",
+        "label": "Elo expected score (home)",
+        "value": 0.5139533794194364,
+        "shap_home": -0.06425942407189837,
+        "direction": "away from home win"
+      }
+    ]
+  },
+  {
+    "match_id": "2026_Newcastle_Everton",
+    "base_home_logit": -0.8580336717231231,
+    "drivers": [
+      {
+        "feature": "xg_balance_diff",
+        "label": "xG balance gap (home - away)",
+        "value": -0.2731942308427828,
+        "shap_home": -0.15455333742672833,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "elo_home",
+        "label": "Home Elo rating",
+        "value": 1476.0843869914142,
+        "shap_home": -0.07809269574349532,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "a_xgf_ewm",
+        "label": "Away xG created (recent avg)",
+        "value": 1.439095025656924,
+        "shap_home": -0.058921368715600095,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "goal_balance_diff",
+        "label": "Goal balance gap (home - away)",
+        "value": 0.1501024884698261,
+        "shap_home": 0.05674326180590362,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "h_sotf_ewm",
+        "label": "Home shots on target (recent avg)",
+        "value": 3.8411931191381865,
+        "shap_home": -0.034204295916174715,
+        "direction": "away from home win"
+      }
+    ]
+  },
+  {
+    "match_id": "2026_Everton_Coventry",
+    "base_home_logit": -0.8580336717231231,
+    "drivers": [
+      {
+        "feature": "a_xgf_ewm",
+        "label": "Away xG created (recent avg)",
+        "value": 1.007748782989275,
+        "shap_home": 0.1621602352013876,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "elo_exp_home",
+        "label": "Elo expected score (home)",
+        "value": 0.7560094624619296,
+        "shap_home": 0.10190834598150655,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "elo_home",
+        "label": "Home Elo rating",
+        "value": 1441.050379023194,
+        "shap_home": -0.07922316425131698,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "xg_balance_diff",
+        "label": "xG balance gap (home - away)",
+        "value": 0.2902894610767395,
+        "shap_home": 0.07526163709624856,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "goal_balance_diff",
+        "label": "Goal balance gap (home - away)",
+        "value": 0.5940501133369602,
+        "shap_home": 0.047168150114843564,
+        "direction": "towards home win"
+      }
+    ]
+  }
+]

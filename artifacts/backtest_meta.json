@@ -1,0 +1,26 @@
+{
+  "n_test_matches": 760,
+  "n_validation_matches": 1520,
+  "test_seasons": [
+    2024,
+    2025
+  ],
+  "validation_seasons": [
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "mean_overround": {
+    "pre": 0.04154044783315203,
+    "close": 0.03641735057281566
+  },
+  "lr_params": {
+    "C": 0.01
+  },
+  "lgbm_params": {
+    "n_estimators": 150,
+    "num_leaves": 7,
+    "min_child_samples": 100
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "by_model": [
+    {
+      "model": "Dixon-Coles",
+      "split": "test",
+      "actual_draw_rate": 0.25921052631578945,
+      "mean_pred_draw": 0.2373801621457813,
+      "max_pred_draw": 0.3216094915428628,
+      "draw_is_argmax_pct": 0.0,
+      "draw_brier": 0.19104788137164114
+    },
+    {
+      "model": "Dixon-Coles",
+      "split": "validation",
+      "actual_draw_rate": 0.2236842105263158,
+      "mean_pred_draw": 0.2368623682229178,
+      "max_pred_draw": 0.3444973369361864,
+      "draw_is_argmax_pct": 0.0,
+      "draw_brier": 0.17287913003735536
+    },
+    {
+      "model": "LightGBM + temperature",
+      "split": "test",
+      "actual_draw_rate": 0.25921052631578945,
+      "mean_pred_draw": 0.22650929355215543,
+      "max_pred_draw": 0.42600742168362726,
+      "draw_is_argmax_pct": 0.011842105263157895,
+      "draw_brier": 0.19599940912311536
+    },
+    {
+      "model": "LightGBM + temperature",
+      "split": "validation",
+      "actual_draw_rate": 0.2236842105263158,
+      "mean_pred_draw": 0.25084906019866066,
+      "max_pred_draw": 0.4857507031695873,
+      "draw_is_argmax_pct": 0.05526315789473684,
+      "draw_brier": 0.17544967929820773
+    },
+    {
+      "model": "Logistic regression",
+      "split": "test",
+      "actual_draw_rate": 0.25921052631578945,
+      "mean_pred_draw": 0.229975973904865,
+      "max_pred_draw": 0.33860779949229636,
+      "draw_is_argmax_pct": 0.0,
+      "draw_brier": 0.19404994095864703
+    },
+    {
+      "model": "Logistic regression",
+      "split": "validation",
+      "actual_draw_rate": 0.2236842105263158,
+      "mean_pred_draw": 0.23250168855077002,
+      "max_pred_draw": 0.4009876440448741,
+      "draw_is_argmax_pct": 0.001973684210526316,
+      "draw_brier": 0.17273937336186795
+    },
+    {
+      "model": "Market closing (Shin)",
+      "split": "test",
+      "actual_draw_rate": 0.25921052631578945,
+      "mean_pred_draw": 0.23786846005221549,
+      "max_pred_draw": 0.3241379583768971,
+      "draw_is_argmax_pct": 0.0,
+      "draw_brier": 0.1910655161207955
+    },
+    {
+      "model": "Market closing (Shin)",
+      "split": "validation",
+      "actual_draw_rate": 0.2236842105263158,
+      "mean_pred_draw": 0.2375415478666258,
+      "max_pred_draw": 0.33719189822604534,
+      "draw_is_argmax_pct": 0.0,
+      "draw_brier": 0.17180328409007592
+    },
+    {
+      "model": "Poisson (rho=0)",
+      "split": "test",
+      "actual_draw_rate": 0.25921052631578945,
+      "mean_pred_draw": 0.2304901626413823,
+      "max_pred_draw": 0.3029407762751424,
+      "draw_is_argmax_pct": 0.0,
+      "draw_brier": 0.1913098033092036
+    },
+    {
+      "model": "Poisson (rho=0)",
+      "split": "validation",
+      "actual_draw_rate": 0.2236842105263158,
+      "mean_pred_draw": 0.2348323031621782,
+      "max_pred_draw": 0.3366404564406412,
+      "draw_is_argmax_pct": 0.0,
+      "draw_brier": 0.1726802760467575
+    }
+  ],
+  "rules": [
+    {
+      "model": "LightGBM + temperature",
+      "rule": "argmax (default)",
+      "threshold": 1.01,
+      "accuracy": 0.49736842105263157,
+      "draw_recall": 0.01015228426395939,
+      "draw_precision": 0.2222222222222222,
+      "draw_f1": 0.019417475728155338,
+      "draws_called": 9
+    },
+    {
+      "model": "LightGBM + temperature",
+      "rule": "draw if P(D) >= 0.245",
+      "threshold": 0.245,
+      "accuracy": 0.44473684210526315,
+      "draw_recall": 0.4619289340101523,
+      "draw_precision": 0.28173374613003094,
+      "draw_f1": 0.35000000000000003,
+      "draws_called": 323
+    },
+    {
+      "model": "Dixon-Coles",
+      "rule": "argmax (default)",
+      "threshold": 1.01,
+      "accuracy": 0.5,
+      "draw_recall": 0.0,
+      "draw_precision": 0.0,
+      "draw_f1": 0.0,
+      "draws_called": 0
+    },
+    {
+      "model": "Dixon-Coles",
+      "rule": "draw if P(D) >= 0.245",
+      "threshold": 0.245,
+      "accuracy": 0.45394736842105265,
+      "draw_recall": 0.49238578680203043,
+      "draw_precision": 0.29573170731707316,
+      "draw_f1": 0.3695238095238095,
+      "draws_called": 328
+    },
+    {
+      "model": "Market closing (Shin)",
+      "rule": "argmax (default)",
+      "threshold": 1.01,
+      "accuracy": 0.5197368421052632,
+      "draw_recall": 0.0,
+      "draw_precision": 0.0,
+      "draw_f1": 0.0,
+      "draws_called": 0
+    },
+    {
+      "model": "Market closing (Shin)",
+      "rule": "draw if P(D) >= 0.260",
+      "threshold": 0.26,
+      "accuracy": 0.48026315789473684,
+      "draw_recall": 0.4213197969543147,
+      "draw_precision": 0.29856115107913667,
+      "draw_f1": 0.3494736842105263,
+      "draws_called": 278
+    }
+  ],
+  "draw_rate_by_elo_quintile": [
+    0.2735,
+    0.2829,
+    0.2465,
+    0.2312,
+    0.1549
+  ],
+  "draw_rate_by_goals_quintile": [
+    0.2669,
+    0.2585,
+    0.2097,
+    0.2542,
+    0.197
+  ]
+}

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pitchiq"
+version = "1.0.0"
+description = "EPL match-outcome probabilities, benchmarked against bookmakers, with a Monte Carlo season simulator"
+requires-python = ">=3.11"
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["slow: full end-to-end pipeline run on synthetic data (~3 min)"]

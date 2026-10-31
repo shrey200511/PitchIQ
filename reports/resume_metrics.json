@@ -1,0 +1,112 @@
+{
+  "synthetic": false,
+  "n_test_matches": 760,
+  "n_validation_matches": 1520,
+  "test_log_loss": {
+    "Base rates": 1.0824,
+    "Elo-logit": 1.0176,
+    "Poisson (rho=0)": 1.0076,
+    "Dixon-Coles": 1.0069,
+    "Logistic regression": 1.0132,
+    "LightGBM": 1.0229,
+    "LightGBM + temperature": 1.0219,
+    "Market pre-match (prop.)": 0.9931,
+    "Market closing (prop.)": 0.9901,
+    "Market closing (Shin)": 0.9906
+  },
+  "test_accuracy": {
+    "Always home": 0.4171,
+    "Base rates": 0.4171,
+    "Elo-logit": 0.4908,
+    "Poisson (rho=0)": 0.5,
+    "Dixon-Coles": 0.5,
+    "Logistic regression": 0.5013,
+    "LightGBM": 0.4974,
+    "LightGBM + temperature": 0.4974,
+    "Market pre-match (prop.)": 0.5171,
+    "Market closing (prop.)": 0.5197,
+    "Market closing (Shin)": 0.5197
+  },
+  "test_brier": {
+    "Base rates": 0.6558,
+    "Elo-logit": 0.6122,
+    "Poisson (rho=0)": 0.603,
+    "Dixon-Coles": 0.6026,
+    "Logistic regression": 0.6088,
+    "LightGBM": 0.6123,
+    "LightGBM + temperature": 0.6113,
+    "Market pre-match (prop.)": 0.5945,
+    "Market closing (prop.)": 0.5922,
+    "Market closing (Shin)": 0.5926
+  },
+  "test_ece": {
+    "Base rates": 0.02,
+    "Elo-logit": 0.0411,
+    "Poisson (rho=0)": 0.0288,
+    "Dixon-Coles": 0.0257,
+    "Logistic regression": 0.0411,
+    "LightGBM": 0.0434,
+    "LightGBM + temperature": 0.0393,
+    "Market pre-match (prop.)": 0.0324,
+    "Market closing (prop.)": 0.0286,
+    "Market closing (Shin)": 0.0271
+  },
+  "bootstrap_vs_market": [
+    {
+      "model": "Market closing (prop.)",
+      "diff_vs_market": -0.0004,
+      "ci_low": -0.0015,
+      "ci_high": 0.0006
+    },
+    {
+      "model": "Market pre-match (prop.)",
+      "diff_vs_market": 0.0025,
+      "ci_low": -0.0024,
+      "ci_high": 0.0075
+    },
+    {
+      "model": "Dixon-Coles",
+      "diff_vs_market": 0.0163,
+      "ci_low": 0.0033,
+      "ci_high": 0.0286
+    },
+    {
+      "model": "Poisson (rho=0)",
+      "diff_vs_market": 0.0171,
+      "ci_low": 0.004,
+      "ci_high": 0.0293
+    },
+    {
+      "model": "Logistic regression",
+      "diff_vs_market": 0.0226,
+      "ci_low": 0.0084,
+      "ci_high": 0.0356
+    },
+    {
+      "model": "Elo-logit",
+      "diff_vs_market": 0.027,
+      "ci_low": 0.0138,
+      "ci_high": 0.0396
+    },
+    {
+      "model": "LightGBM + temperature",
+      "diff_vs_market": 0.0313,
+      "ci_low": 0.0145,
+      "ci_high": 0.0476
+    },
+    {
+      "model": "LightGBM",
+      "diff_vs_market": 0.0324,
+      "ci_low": 0.016,
+      "ci_high": 0.0481
+    },
+    {
+      "model": "Base rates",
+      "diff_vs_market": 0.0919,
+      "ci_low": 0.0651,
+      "ci_high": 0.1181
+    }
+  ],
+  "leakage_dates_checked": 7,
+  "n_simulations": 10000
+}

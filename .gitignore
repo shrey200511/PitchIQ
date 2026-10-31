@@ -1,0 +1,17 @@
+# environments
+.venv/
+__pycache__/
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# data: raw downloads are never committed (respect the sources; keep the repo small)
+data/
+
+# artifacts/ and reports/ ARE committed: they are small, derived, and the app reads them
+.env
+.env.*
+!.env.example
+
+# offline demo output from `make synthetic`
+synthetic_run/
