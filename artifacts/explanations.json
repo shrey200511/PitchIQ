@@ -1,87 +1,5 @@
 [
   {
-    "match_id": "2026_Aston Villa_Fulham",
-    "base_home_logit": -0.8580336717231231,
-    "drivers": [
-      {
-        "feature": "xg_balance_diff",
-        "label": "xG balance gap (home - away)",
-        "value": -0.26521451491561643,
-        "shap_home": -0.1475290409402509,
-        "direction": "away from home win"
-      },
-      {
-        "feature": "a_xgf_ewm",
-        "label": "Away xG created (recent avg)",
-        "value": 1.4913656408659757,
-        "shap_home": -0.08133842049130516,
-        "direction": "away from home win"
-      },
-      {
-        "feature": "a_sota_ewm",
-        "label": "Away shots on target allowed",
-        "value": 3.655288288222833,
-        "shap_home": -0.055076297381512346,
-        "direction": "away from home win"
-      },
-      {
-        "feature": "elo_home",
-        "label": "Home Elo rating",
-        "value": 1510.574121863634,
-        "shap_home": 0.0541909636476782,
-        "direction": "towards home win"
-      },
-      {
-        "feature": "elo_exp_home",
-        "label": "Elo expected score (home)",
-        "value": 0.7042634174726474,
-        "shap_home": 0.04253074821108664,
-        "direction": "towards home win"
-      }
-    ]
-  },
-  {
-    "match_id": "2026_Tottenham_Crystal Palace",
-    "base_home_logit": -0.8580336717231231,
-    "drivers": [
-      {
-        "feature": "xg_balance_diff",
-        "label": "xG balance gap (home - away)",
-        "value": 0.4619604339023409,
-        "shap_home": 0.11736798006065575,
-        "direction": "towards home win"
-      },
-      {
-        "feature": "elo_home",
-        "label": "Home Elo rating",
-        "value": 1427.1909163479354,
-        "shap_home": -0.0780304121841843,
-        "direction": "away from home win"
-      },
-      {
-        "feature": "a_xgf_ewm",
-        "label": "Away xG created (recent avg)",
-        "value": 1.539940388559901,
-        "shap_home": -0.0776235151436755,
-        "direction": "away from home win"
-      },
-      {
-        "feature": "a_ga_ewm",
-        "label": "Away goals conceded (recent avg)",
-        "value": 2.1281109487524503,
-        "shap_home": 0.06775878908007314,
-        "direction": "towards home win"
-      },
-      {
-        "feature": "elo_exp_home",
-        "label": "Elo expected score (home)",
-        "value": 0.6044497394520509,
-        "shap_home": -0.04692878764511892,
-        "direction": "away from home win"
-      }
-    ]
-  },
-  {
     "match_id": "2026_Liverpool_Arsenal",
     "base_home_logit": -0.8580336717231231,
     "drivers": [
@@ -201,6 +119,170 @@
         "value": 0.5940501133369602,
         "shap_home": 0.047168150114843564,
         "direction": "towards home win"
+      }
+    ]
+  },
+  {
+    "match_id": "2026_Arsenal_Hull",
+    "base_home_logit": -0.8580336717231231,
+    "drivers": [
+      {
+        "feature": "xg_balance_diff",
+        "label": "xG balance gap (home - away)",
+        "value": 1.5816993258156729,
+        "shap_home": 0.3709861243782307,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "elo_exp_home",
+        "label": "Elo expected score (home)",
+        "value": 0.8995945311632901,
+        "shap_home": 0.20291534760609806,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "elo_home",
+        "label": "Home Elo rating",
+        "value": 1647.7205143501944,
+        "shap_home": 0.16701320242143264,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "elo_diff",
+        "label": "Elo gap (home - away)",
+        "value": 305.91577528091557,
+        "shap_home": 0.11102699184602104,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "goal_balance_diff",
+        "label": "Goal balance gap (home - away)",
+        "value": 1.0235611272373406,
+        "shap_home": 0.051625347248118125,
+        "direction": "towards home win"
+      }
+    ]
+  },
+  {
+    "match_id": "2026_Fulham_Newcastle",
+    "base_home_logit": -0.8580336717231231,
+    "drivers": [
+      {
+        "feature": "xg_balance_diff",
+        "label": "xG balance gap (home - away)",
+        "value": 0.5001821476411115,
+        "shap_home": 0.1287518266946669,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "elo_home",
+        "label": "Home Elo rating",
+        "value": 1434.8420899145426,
+        "shap_home": -0.07799756016011156,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "elo_exp_home",
+        "label": "Elo expected score (home)",
+        "value": 0.5484289369733101,
+        "shap_home": -0.06698985262790687,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "goal_balance_diff",
+        "label": "Goal balance gap (home - away)",
+        "value": 0.12478099224790906,
+        "shap_home": 0.057205024269733375,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "h_sotf_ewm",
+        "label": "Home shots on target (recent avg)",
+        "value": 4.2046500471201185,
+        "shap_home": -0.04049096188278053,
+        "direction": "away from home win"
+      }
+    ]
+  },
+  {
+    "match_id": "2026_Leeds_Tottenham",
+    "base_home_logit": -0.8580336717231231,
+    "drivers": [
+      {
+        "feature": "elo_home",
+        "label": "Home Elo rating",
+        "value": 1374.3101593990311,
+        "shap_home": -0.09563223817132491,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "goal_balance_diff",
+        "label": "Goal balance gap (home - away)",
+        "value": 0.25979482621060945,
+        "shap_home": 0.06939493337801259,
+        "direction": "towards home win"
+      },
+      {
+        "feature": "elo_exp_home",
+        "label": "Elo expected score (home)",
+        "value": 0.5317892124331509,
+        "shap_home": -0.06442449757014328,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "a_sota_ewm",
+        "label": "Away shots on target allowed",
+        "value": 3.6443200016367516,
+        "shap_home": -0.05549809343446767,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "h2h_ppg_home",
+        "label": "Head-to-head pts/game (home side)",
+        "value": 0.16666666666666666,
+        "shap_home": 0.03962110030271595,
+        "direction": "towards home win"
+      }
+    ]
+  },
+  {
+    "match_id": "2026_Nott'm Forest_Man City",
+    "base_home_logit": -0.8580336717231231,
+    "drivers": [
+      {
+        "feature": "xg_balance_diff",
+        "label": "xG balance gap (home - away)",
+        "value": -0.5960356231063524,
+        "shap_home": -0.20334492322655226,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "elo_diff",
+        "label": "Elo gap (home - away)",
+        "value": -226.62611917664663,
+        "shap_home": -0.15678312955890297,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "goal_balance_diff",
+        "label": "Goal balance gap (home - away)",
+        "value": -1.2260625339937221,
+        "shap_home": -0.11096904821690481,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "elo_exp_home",
+        "label": "Elo expected score (home)",
+        "value": 0.29466575758909186,
+        "shap_home": -0.10812679306878777,
+        "direction": "away from home win"
+      },
+      {
+        "feature": "elo_home",
+        "label": "Home Elo rating",
+        "value": 1430.2337964614073,
+        "shap_home": -0.07140583776799864,
+        "direction": "away from home win"
       }
     ]
   }

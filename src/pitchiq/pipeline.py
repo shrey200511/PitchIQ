@@ -134,8 +134,15 @@ def step_live():
     Xv, yv = ml.xy(table[table.season == last], FEATURES)
     T = ml.fit_temperature(ml.predict(inner, Xv), yv) if len(Xv) else 1.0
 
-    upcoming = table[table.result.isna() & (table.season == config.CURRENT_SEASON)].sort_values("date")
-    next_dates = upcoming.date.drop_duplicates().head(4)          # roughly the next round
+    today = pd.Timestamp.now(tz="UTC").tz_localize(None).normalize()
+
+    upcoming = table[
+        table.result.isna()
+        & (table.season == config.CURRENT_SEASON)
+        & (table.date >= today)
+    ].sort_values("date")
+
+    next_dates = upcoming.date.drop_duplicates().head(4)
     upcoming = upcoming[upcoming.date.isin(next_dates)]
     if len(upcoming):
         p = ml.apply_temperature(ml.predict(model, upcoming[FEATURES]), T)
