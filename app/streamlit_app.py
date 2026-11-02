@@ -85,10 +85,41 @@ with tab_fix:
         if e:
             df = pd.DataFrame(e["drivers"])
             df["shown"] = df.apply(lambda x: f"{x.label} = {x.value:.2f}" if pd.notna(x.value) else f"{x.label} = n/a", axis=1)
-            chart = alt.Chart(df).mark_bar().encode(
-                x=alt.X("shap_home:Q", title="Push toward (+) / away from (−) a home win  [SHAP, logit units]"),
-                y=alt.Y("shown:N", sort=None, title=None),
-                color=alt.condition("datum.shap_home > 0", alt.value("#2E6FBA"), alt.value("#C8463D")))
+            bars = alt.Chart(df).mark_bar(size=20).encode(
+                x=alt.X(
+                    "shap_home:Q",
+                    title="Impact on home-win prediction (SHAP, log-odds)",
+                    axis=alt.Axis(format=".2f")
+                ),
+                y=alt.Y(
+                    "shown:N",
+                    sort=None,
+                    title=None,
+                    axis=alt.Axis(labelLimit=260)
+                ),
+                color=alt.condition(
+                    alt.datum.shap_home > 0,
+                    alt.value("#2E6FBA"),
+                    alt.value("#C8463D")
+                ),
+                tooltip=[
+                    alt.Tooltip("label:N", title="Feature"),
+                    alt.Tooltip("value:Q", title="Feature value", format=".3f"),
+                    alt.Tooltip("shap_home:Q", title="SHAP impact", format="+.4f")
+                ]
+            )
+
+            zero_line = alt.Chart(pd.DataFrame({"x": [0]})).mark_rule(
+                color="#777777",
+                strokeDash=[4, 4]
+            ).encode(
+                x="x:Q"
+            )
+
+            chart = alt.layer(bars, zero_line).properties(
+                height=max(180, len(df) * 42)
+            )
+
             st.altair_chart(chart, width="stretch")
             st.caption("Top 5 features by absolute SHAP value for the home-win class. Each bar is how much "
                        "that feature moved this prediction relative to the model's average.")
